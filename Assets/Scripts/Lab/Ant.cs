@@ -24,7 +24,7 @@ public class Ant : Enemy
     {
         rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
 
-        // Set if ant position when ant move pass
+        // Set if ant position when ant move pass a or b point
         if ((rb.position.x <= movePoints[0].position.x && velocity.x < 0) || (rb.position.x >= movePoints[1].position.x && velocity.x > 0))
         {
             Flip();
