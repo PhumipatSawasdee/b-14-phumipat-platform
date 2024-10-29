@@ -2,26 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Croccodie : Enemy
+public class Croccodie : Enemy, IShootable
 {
     [SerializeField] private float _attackRange;
     public Player player;
 
-    [SerializeField] private GameObject bullet;
-    [SerializeField] private Transform bulletSpawnPoint;
+    [field: SerializeField] public GameObject Bullet { get; set; }
+    [field: SerializeField] public Transform SpawnPoint { get; set; }
 
-    [SerializeField] private float bulletSpawnTime;
-    [SerializeField] private float bulletTimer;
+    [field: SerializeField] public float ReloadTime { get; set; }
+    public float WaitTime { get; set; }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        bulletTimer -= Time.deltaTime;
+        WaitTime -= Time.deltaTime;
 
         Behaviour();
 
-        if (bulletTimer < 0f)
+        if (WaitTime < 0f)
         {
-            bulletTimer = bulletSpawnTime;
+            WaitTime = ReloadTime;
         }
     }
 
@@ -37,13 +37,14 @@ public class Croccodie : Enemy
         }
     }
 
-    private void Shoot()
+    public void Shoot()
     {
-        if (bulletTimer <= 0)
+        if (WaitTime <= 0f)
         {
             // Instantiate : Clone object with base object
             // Instantiate is overload method it's can use a lot of form
-            Instantiate(bullet, bulletSpawnPoint.position, Quaternion.identity);
+            GameObject bulletObject = Instantiate(Bullet, SpawnPoint.position, Quaternion.identity);
+            Destroy(bulletObject, 2f);
         }
     }
 }
