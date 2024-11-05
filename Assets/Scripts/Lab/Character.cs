@@ -33,6 +33,9 @@ public abstract class Character : MonoBehaviour
     {
         Health -= damage;
         HealthSprite.transform.localScale = new Vector2((float)Health / (float)_maxHealth, .1f);
+
+        Debug.Log($"Current Health : {Health}");
+        IsDead();
     }
 
     public void Init(int newHealth)

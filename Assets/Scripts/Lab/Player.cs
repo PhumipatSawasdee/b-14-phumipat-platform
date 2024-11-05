@@ -14,8 +14,6 @@ public class Player : Character, IShootable
     {
         Init(100);
         Debug.Log($"Player Health : {Health}");
-
-        TakeDamage(20);
     }
 
     private void Update()
@@ -34,6 +32,8 @@ public class Player : Character, IShootable
         {
             GameObject bulletObject = Instantiate(Bullet, SpawnPoint.position, Quaternion.identity);
             Destroy(bulletObject, 2f);
+            Banana banana = bulletObject.GetComponent<Banana>();
+            banana.Init(30, this);
 
             WaitTime = ReloadTime;
         }

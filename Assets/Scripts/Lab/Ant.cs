@@ -9,11 +9,10 @@ public class Ant : Enemy
 
     private void Start()
     {
-        Init(10);
+        Init(100);
         Debug.Log($"Ant Health : {Health}");
 
         Behaviour();
-        TakeDamage(5);
     }
 
     private void FixedUpdate()

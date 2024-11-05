@@ -15,11 +15,10 @@ public class Croccodie : Enemy, IShootable
 
     private void Start()
     {
-        Init(30);
+        Init(300);
         Debug.Log($"Croccodie Health : {Health}");
 
         Behaviour();
-        TakeDamage(10);
     }
 
     private void FixedUpdate()
@@ -27,11 +26,6 @@ public class Croccodie : Enemy, IShootable
         WaitTime -= Time.deltaTime;
 
         Behaviour();
-
-        if (WaitTime < 0f)
-        {
-            WaitTime = ReloadTime;
-        }
     }
 
     public override void Behaviour()
@@ -50,10 +44,16 @@ public class Croccodie : Enemy, IShootable
     {
         if (WaitTime <= 0f)
         {
+            anim.SetTrigger("Shoot");
+
             // Instantiate : Clone object with base object
             // Instantiate is overload method it's can use a lot of form
             GameObject bulletObject = Instantiate(Bullet, SpawnPoint.position, Quaternion.identity);
+            Rock rock = bulletObject.GetComponent<Rock>();
+            rock.Init(20, this);
+
             Destroy(bulletObject, 2f);
+            WaitTime = ReloadTime;
         }
     }
 }
