@@ -10,6 +10,14 @@ public class Player : Character, IShootable
     [field: SerializeField] public float ReloadTime { get; set; }
     public float WaitTime { get; set; }
 
+    private void Start()
+    {
+        Init(100);
+        Debug.Log($"Player Health : {Health}");
+
+        TakeDamage(20);
+    }
+
     private void Update()
     {
         Shoot();

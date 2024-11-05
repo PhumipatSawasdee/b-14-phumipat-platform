@@ -13,6 +13,15 @@ public class Croccodie : Enemy, IShootable
     [field: SerializeField] public float ReloadTime { get; set; }
     public float WaitTime { get; set; }
 
+    private void Start()
+    {
+        Init(30);
+        Debug.Log($"Croccodie Health : {Health}");
+
+        Behaviour();
+        TakeDamage(10);
+    }
+
     private void FixedUpdate()
     {
         WaitTime -= Time.deltaTime;
