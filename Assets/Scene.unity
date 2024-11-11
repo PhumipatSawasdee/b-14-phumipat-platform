@@ -463,6 +463,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7400699445309272250, guid: 3eeab7ca4bdca4ba382826bdc99b4911, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 155.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400699445309272250, guid: 3eeab7ca4bdca4ba382826bdc99b4911, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -80.95
+      objectReference: {fileID: 0}
     - target: {fileID: 7452023671946381280, guid: 3eeab7ca4bdca4ba382826bdc99b4911, type: 3}
       propertyPath: movePoints.Array.data[0]
       value: 
@@ -471,6 +479,10 @@ PrefabInstance:
       propertyPath: movePoints.Array.data[1]
       value: 
       objectReference: {fileID: 1848222065}
+    - target: {fileID: 9128374692022288686, guid: 3eeab7ca4bdca4ba382826bdc99b4911, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 335043080}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2764,6 +2776,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4728916557818009217, guid: c07db661138134f589f46b8510d57c9a, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 335043080}
+    - target: {fileID: 6465599003781621525, guid: c07db661138134f589f46b8510d57c9a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -233.279
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465599003781621525, guid: c07db661138134f589f46b8510d57c9a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -157.479
+      objectReference: {fileID: 0}
     - target: {fileID: 6527868126261910101, guid: c07db661138134f589f46b8510d57c9a, type: 3}
       propertyPath: player
       value: 
@@ -2887,6 +2911,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4663477734627860123, guid: 6dde6029886a24408b05eced6b5964a6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 232.193
+      objectReference: {fileID: 0}
+    - target: {fileID: 4663477734627860123, guid: 6dde6029886a24408b05eced6b5964a6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 55.546
+      objectReference: {fileID: 0}
+    - target: {fileID: 6386685701867351823, guid: 6dde6029886a24408b05eced6b5964a6, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 335043080}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

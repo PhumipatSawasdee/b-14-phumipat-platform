@@ -24,7 +24,7 @@ public class Banana : Weapon
         Vector2 newPosition = new Vector2(newX, newY);
         transform.position = newPosition;
 
-        Debug.Log("Banana move with constant speed by Tranform");
+        //Debug.Log("Banana move with constant speed by Tranform");
     }
 
     public override void OnHitWith(Character character)

@@ -5,11 +5,17 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    public Slider HealthSlid;
+    public Image healthImage;
 
-    // Update is called once per frame
-    public void HealthUpdate()
+    private int _maxHealth;
+
+    public void SetMaxHealth(int health)
     {
-        
+        _maxHealth = health;
+    }
+
+    public void HealthUpdate(int health)
+    {
+        healthImage.fillAmount = (float)health / (float)_maxHealth;
     }
 }
