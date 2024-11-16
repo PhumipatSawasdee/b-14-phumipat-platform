@@ -41,6 +41,14 @@ public class Player : Character, IShootable
 
     public void OnHitWith(Enemy enemy)
     {
+        if (enemy is Enemy)
+        {
+            TakeDamage(20);
+        }
+    }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        OnHitWith(other.GetComponent<Enemy>());
     }
 }

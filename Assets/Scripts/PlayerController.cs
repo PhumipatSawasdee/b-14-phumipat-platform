@@ -9,7 +9,9 @@ public class PlayerController : MonoBehaviour {
 	Rigidbody2D r2d;
 	Animator anim;
 
-	public bool grounded = false;
+    public HealthBar healthBar;
+
+    public bool grounded = false;
 	public Transform groundCheck;
 	float groundRadius = 0.2f;
 	public LayerMask whatIsGround;
@@ -52,5 +54,7 @@ public class PlayerController : MonoBehaviour {
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
-	}
+
+        healthBar.transform.localScale *= -1;
+    }
 }
